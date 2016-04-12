@@ -18,8 +18,13 @@ h1 {
   color: #d20000;
 }
 h2 {
+  font-family: Squealer;
+  margin-bottom: 20px;
+  font-size: 11vw;
+  width: 100%;
   color:#ccc;
 }
+
 .unselectable {
   -webkit-user-select: none;
   -moz-user-select: none;

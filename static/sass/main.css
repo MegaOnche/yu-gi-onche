@@ -1,6 +1,11 @@
 @font-face {
+<<<<<<< HEAD
   font-family: Matrix;
   src: url("../fonts/matrixbsc_0.ttf"); }
+=======
+  font-family: Squealer;
+  src: url("../fonts/squealer_embossed.ttf"); }
+>>>>>>> 70e5b213da2362e0997b317ac8372b24ce7c07cf
 body {
   background: #0d0d0d;
   color: #fff; }
@@ -10,7 +15,11 @@ button {
 
 h1 {
   text-align: center;
+<<<<<<< HEAD
   font-family: Matrix;
+=======
+  font-family: Squealer;
+>>>>>>> 70e5b213da2362e0997b317ac8372b24ce7c07cf
   margin-bottom: 20px;
   font-size: 11vw;
   width: 100%;
