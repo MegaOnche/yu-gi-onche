@@ -1,6 +1,6 @@
 @font-face {
-  font-family: Squealer;
-  src: url("../fonts/squealer_embossed.ttf");
+  font-family: Matrix;
+  src: url("../fonts/matrixbsc_0.ttf");
 }
 body {
   background: #0d0d0d;
@@ -11,14 +11,14 @@ button {
 }
 h1 {
   text-align: center;
-  font-family: Squealer;
+  font-family: Matrix;
   margin-bottom: 20px;
   font-size: 11vw;
   width: 100%;
   color: #d20000;
 }
 h2 {
-  color: #ccc;
+  color:#ccc;
 }
 .unselectable {
   -webkit-user-select: none;
@@ -26,5 +26,6 @@ h2 {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+
   cursor: default;
 }
