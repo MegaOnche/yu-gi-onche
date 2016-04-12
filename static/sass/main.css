@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Squealer;
+  src: url("../fonts/squealer_embossed.ttf"); }
+body {
+  background: #0d0d0d;
+  color: #fff; }
+
+button {
+  width: 100%; }
+
+h1 {
+  text-align: center;
+  font-family: Squealer;
+  margin-bottom: 20px;
+  font-size: 11vw;
+  width: 100%;
+  color: #d20000; }
+
+h2 {
+  color: #ccc; }
+
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,13 @@
+#log_container .error {
+  display: none; }
+#log_container #form_log * {
+  margin-bottom: 5px; }
+#log_container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1vw;
+  width: 100%; }
+#log_container #submit {
+  width: 100%; }
+
+/*# sourceMappingURL=log.css.map */

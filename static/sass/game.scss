@@ -1,0 +1,16 @@
+#container {
+  overflow: hidden;
+  background:#fff;
+  color:#000;
+  #game_col {
+    padding: 0;
+    #game_zone {
+      background: #0d0d0d;
+      height: 100vh;
+
+      button {
+        margin-bottom:15px;
+      }
+    }
+  }
+}

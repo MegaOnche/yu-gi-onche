@@ -1,0 +1,13 @@
+#container {
+  overflow: hidden;
+  background: #fff;
+  color: #000; }
+  #container #game_col {
+    padding: 0; }
+    #container #game_col #game_zone {
+      background: #0d0d0d;
+      height: 100vh; }
+      #container #game_col #game_zone button {
+        margin-bottom: 15px; }
+
+/*# sourceMappingURL=game.css.map */

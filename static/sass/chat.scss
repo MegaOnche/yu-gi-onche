@@ -1,0 +1,33 @@
+#container {
+  padding: 0;
+  #chat_col {
+    #chat {
+      background: #fff;
+      padding: 15px;
+      #mess_zone {
+        height: 90vh;
+        max-height: 90vh;
+        overflow-y: scroll;
+        max-width: 100%;
+        overflow-x: hidden;
+        .message{
+          word-wrap: break-word;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          li {
+            div {
+              display: inline;
+            }
+
+            .pseudo {
+              color: #dd0000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

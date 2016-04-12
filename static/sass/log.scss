@@ -1,0 +1,17 @@
+#log_container {
+  .error {
+    display: none;
+  }
+  #form_log *{
+    margin-bottom:5px;
+  }
+  h2{
+    text-align: center;
+    margin-bottom:20px;
+    font-size:1vw;
+    width:100%;
+  }
+  #submit{
+    width:100%;
+  }
+}

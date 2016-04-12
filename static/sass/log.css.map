@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,qBAAO;EACL,OAAO,EAAE,IAAI;AAEf,0BAAW;EACT,aAAa,EAAC,GAAG;AAEnB,iBAAE;EACA,UAAU,EAAE,MAAM;EAClB,aAAa,EAAC,IAAI;EAClB,SAAS,EAAC,GAAG;EACb,KAAK,EAAC,IAAI;AAEZ,sBAAO;EACL,KAAK,EAAC,IAAI",
+"sources": ["log.scss"],
+"names": [],
+"file": "log.css"
+}
