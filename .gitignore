@@ -1,2 +1,4 @@
 node_modules
 .sass-cache
+public/.sass-cache
+app/secret.js

@@ -4,33 +4,38 @@
 }
 body {
   background: #0d0d0d;
-  color: #fff;
+  color: #eee;
 }
-button {
+.btn,
+input {
   width: 100%;
+  margin: 10px 0;
 }
 h1 {
   text-align: center;
   font-family: Matrix;
   margin-bottom: 20px;
-  font-size: 11vw;
+  font-size: 14vw;
   width: 100%;
   color: #d20000;
 }
 h2 {
-  font-family: Squealer;
+  text-align: center;
   margin-bottom: 20px;
-  font-size: 11vw;
+  font-size: 22px;
   width: 100%;
-  color:#ccc;
+  color: #ccc;
 }
-
 .unselectable {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-
   cursor: default;
+}
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 140px;
+  }
 }

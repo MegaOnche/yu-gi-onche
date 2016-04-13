@@ -3,8 +3,9 @@
   background: #fff;
   color: #000; }
   #container #game_col {
-    padding: 0; }
+    padding-left: 0; }
     #container #game_col #game_zone {
+      padding: 15px;
       background: #0d0d0d;
       height: 100vh; }
       #container #game_col #game_zone button {

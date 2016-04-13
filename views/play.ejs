@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="sass/main.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="sass/chat.css">
+    <link rel="stylesheet" href="sass/game.css">
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+  </head>
+  <body>
+    <script>
+      assignInfos(htmlDecode("<%= JSON.stringify(pseudo) %>"));
+    </script>
+
+    <div class="container-fluid" id="container">
+      <div class="row">
+        <div class="col-xs-3 col-lg-2" id="chat_col">
+          <div id="chat">
+            <div id="send_zone">
+                <input type="text" class="form-control" id="mess" placeholder="Message ...">
+            </div>
+            <div id="mess_zone">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-9 col-lg-10" id="game_col">
+          <div id="game_zone">
+            <div id="btns">
+              <div class="row">
+                <div class="col-xs-6 col-lg-3">
+                  <button class="btn btn-default" id="attack_btn" type="button">Attaquer</button>
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                  <button class="btn btn-default" id="attack_btn" type="button">Activer une carte ou un effet</button>
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                  <button class="btn btn-default" id="attack_btn" type="button">Poser des Cartes Magie et des Cartes Piège</button>
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                  <button class="btn btn-default" id="attack_btn" type="button">Changer la position de combat d'un Monstre</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

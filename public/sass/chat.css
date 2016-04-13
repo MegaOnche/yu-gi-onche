@@ -1,0 +1,25 @@
+#container {
+  padding: 0; }
+  #container #chat_col {
+    padding-right: 0; }
+    #container #chat_col #chat {
+      background: #fff;
+      padding: 15px; }
+      #container #chat_col #chat #mess_zone {
+        height: calc(100vh - 100px);
+        max-height: calc(100vh - 100px);
+        overflow-y: scroll;
+        max-width: 100%;
+        overflow-x: hidden; }
+        #container #chat_col #chat #mess_zone .message {
+          word-wrap: break-word; }
+        #container #chat_col #chat #mess_zone ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none; }
+          #container #chat_col #chat #mess_zone ul li div {
+            display: inline; }
+          #container #chat_col #chat #mess_zone ul li .pseudo {
+            color: #dd0000; }
+
+/*# sourceMappingURL=chat.css.map */
