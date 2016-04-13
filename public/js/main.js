@@ -1,6 +1,6 @@
 var pseudo;
 var userInfos;
-var socket = io.connect('http://yugi-onche.rhcloud.com:8000/', {
+var socket = io.connect('http://test-onche.rhcloud.com:8000/', {
   'forceNew': true
 });
 
