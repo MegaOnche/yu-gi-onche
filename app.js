@@ -54,6 +54,11 @@ app.get('/health', function(req, res) {
 
 app.use('/', express.static(__dirname + '/public'));
 
+app.use(function(req, res) {
+      res.status(404);
+     res.render('404.ejs', {title: '404: File Not Found'});
+  });
+
 //------------------------
 
 io.sockets.on('connection', function(socket, pseudo) {
