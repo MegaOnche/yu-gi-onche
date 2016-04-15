@@ -1,4 +1,3 @@
-
 var LocalStrategy = require('passport-local').Strategy;
 
 var User = require('../app/models/user');
@@ -6,7 +5,7 @@ var User = require('../app/models/user');
 module.exports = function(passport) {
   // passport session setup
   passport.serializeUser(function(user, done) {
-    done(null, user.id);
+    done(null, user);
   });
 
   // used to deserialize the user
@@ -48,6 +47,8 @@ module.exports = function(passport) {
                 newUser.local.username = username;
                 newUser.local.email = req.body.email;
                 newUser.local.password = newUser.generateHash(password);
+                newUser.local.status = 0;
+                newUser.local.deck = [];
 
                 newUser.save(function(err) {
                   if (err)
@@ -80,10 +81,39 @@ module.exports = function(passport) {
 
         if (!user.validPassword(password))
           return done(null, false, req.flash('loginMessage', 'Mauvais mot de passe.'));
-          
+
         return done(null, user);
       });
 
     }));
+  // ADD CARD
+  // passport.use('admin-addcard', new LocalStrategy({
+  //     // usernameField: 'username',
+  //     passwordField: 'password',
+  //     passReqToCallback: true
+  //   },
+  //   function(req, username, password, done) {
+  //     process.nextTick(function() {
+  //       Card.findOne({
+  //         'cardname': req.body.username
+  //       }, function(err, user) {
+  //         if (err)
+  //           return done(err);
+  //
+  //         if (user) {
+  //           return done(null, false, req.flash('signupMessage', 'Ce pseudo existe déjà.'));
+  //         } else {
+  //           // return any error
+  //           if (err)
+  //             return done(err);
+  //
+  //           var newCard = new Card();
+  //
+  //
+  //
+  //         }
+  //       });
+  //     });
+  //   }));
 
 };

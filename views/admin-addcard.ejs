@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Yu-Gi-Onche!</title>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="sass/main.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Yu-Gi-Onche!</h1>
+        <div class="col-xs-8 col-xs-offset-2">
+
+          <h2>Administrationche - Ajouter une carte</h2>
+          <hr>
+          <form action="/admin-addcard" method="post">
+            <div class="form-group">
+              <label>Nom:</label>
+              <input type="text" class="form-control" name="name" placeholder="ex: Lamasticonche Gris aux Yeux à 349€">
+            </div>
+            <div class="form-group">
+              <label>URL de l'image (noelshack):</label>
+              <input type="text" class="form-control" name="url" placeholder="ex: http://www.noelshack.com/2016-15-1460639633-createcard-php.jpeg">
+            </div>
+            <div class="form-group">
+              <label>Type de carte:</label>
+              <div class="radio">
+                <label><input type="radio" name="cardtype" id="monster" style="width:auto;" value="0" checked>Monstre</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="cardtype" id="magic" style="width:auto;" value="1">Magique</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="cardtype" id="piege" style="width:auto;" value="2">Piège</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Niveau (max 12):</label>
+              <input type="number" min="1" max="12" class="form-control" name="level" value="1">
+            </div>
+            <div class="form-group">
+              <label style="display:block;">Set ID:</label>
+              <div class="col-xs-6" style="padding-left:0;">
+                <input type="text" class="form-control" maxlength="3" name="group" placeholder="Lam">
+              </div>
+              <div class="col-xs-6" style="padding-right:0;">
+                <input type="number" class="form-control" min="1" max="999" name="id" placeholder="2">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>ATK:</label>
+              <input type="number" min="0" max="99999" class="form-control" name="atk">
+            </div>
+            <div class="form-group">
+              <label>DEF:</label>
+              <input type="number" min="0" max="99999" class="form-control" name="def">
+            </div>
+            <div class="form-group">
+              <label>Rareté:</label>
+              <div class="radio">
+                <label><input type="radio" name="rarety" id="common" style="width:auto;" value="0" checked>Commun</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="rarety" id="rare" style="width:auto;" value="1">Rare</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="rarety" id="super_rare" style="width:auto;" value="2">Super Rare</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="rarety" id="secret_rare" style="width:auto;" value="3">Secret Rare</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="rarety" id="ultimate_rare" style="width:auto;" value="4">Ultimate Rare</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Autre:</label>
+              <div class="checkbox">
+                <label style="">
+                  <input type="checkbox" name="effect" style="width:auto;">Effet</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default">Ajouter</button>
+          </form>
+
+          <a href="/admin" class="btn btn-default btn-sm">Retour au menu de l'Administrationche</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var reg = "^[0-9]*$";
+      $("input[type=number]").on('keyup change', function(){
+        $(this).val($(this).val().replace(reg));
+      });
+      $("input[name=level]").on('keyup change', function(){
+        if ($(this).val().length >= 2) {
+          $(this).val($(this).val()[0] + $(this).val()[1]);
+        }
+      });
+      $("input[name=setid_0]").on('keyup change', function () {
+        if ($(this).val().length >= 3) {
+          $(this).val($(this).val()[0] + $(this).val()[1] + $(this).val()[2]);
+        }
+      });
+      $("input[name=atk], input[name=def]").on('keyup change', function () {
+        if ($(this).val().length >= 5) {
+          $(this).val($(this).val()[0] + $(this).val()[1] + $(this).val()[2] + $(this).val()[3] + $(this).val()[4]);
+        }
+      });
+    </script>
+  </body>
+</html>

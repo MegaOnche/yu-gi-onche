@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Yu-Gi-Onche!</title>
@@ -6,26 +6,28 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="sass/main.css" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/main.js"></script>
   </head>
   <body>
     <div class="container">
-
       <div class="row">
         <h1>Yu-Gi-Onche!</h1>
         <div class="col-xs-8 col-xs-offset-2">
 
-          <h2>Bienvenue sur Yu-Gi-Onche!</h2>
-          <a href="/login" class="btn btn-default">
-            <span class="fa fa-user"></span>
-            Se connecter</a>
-          <a href="/signup" class="btn btn-default">
-            <span class="fa fa-user"></span>
-            S'enregistrer</a>
+          <h2>Administrationche</h2>
+          <hr>
+          <div id="btns">
+            <div class="col-xs-6">
+              <a href="/admin-addcard" class="btn btn-default btn-sm">Ajouter une carte</a>
+            </div>
+            <div class="col-xs-6">
+              <a href="/admin-rmcard" class="btn btn-default btn-sm">Supprimer une carte</a>
+            </div>
+            <div class="col-xs-12">
+              <a href="/menu" class="btn btn-default btn-sm">Retourner au menu normal</a>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   </body>
 </html>

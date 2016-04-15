@@ -1,12 +1,3 @@
-/*
-URL: https://yugi-onche.rhcloud.com/rockmongo/
-Root User:     admin
-Root Password: _CfWtDs1GI1z
-Database Name: yugi
-
-Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
-*/
-
 var express = require('express'),
   http = require('http'),
   fs = require('fs'),
@@ -34,35 +25,26 @@ mongoose.connect(configDB.url);
 
 require('./config/passport')(passport);
 
-app.use(morgan('dev')); // log every request to the console
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-app.use(cookieParser()); // read cookies (needed for auth)
+app.use(cookieParser());
 
-app.set('view engine', 'ejs'); // set up ejs for templating
-
-// app.use(bodyParser.urlencoded({
-//   extended: true
-// }));
-// app.use(bodyParser.json());
+app.set('view engine', 'ejs');
 
 app.use(session({
   secret: secret.secret
-})); // session secret
+}));
 app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
+app.use(passport.session());
 app.use(flash());
 
-// routes
 require('./app/routes.js')(app, passport);
 
 var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var IPADDRESS = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
-//
-// var PORT = 8080;
-// var IPADDRESS = '127.0.0.1';
 
 
 app.get('/health', function(req, res) {

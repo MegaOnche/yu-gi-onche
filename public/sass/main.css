@@ -33,6 +33,16 @@ h2 {
   user-select: none;
   cursor: default; }
 
+.admin_btn {
+  background-color: #d20000;
+  color: #fff;
+  border-color: #4f0000; }
+
+.admin_btn:hover {
+  background-color: #c10000;
+  color: #ddd;
+  border-color: #4f0000; }
+
 @media only screen and (min-width: 992px) {
   h1 {
     font-size: 140px; } }

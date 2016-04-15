@@ -28,6 +28,11 @@
             <div class="col-xs-6">
               <a href="/profile" class="btn btn-default btn-sm">Mon Profil</a>
             </div>
+            <%if(user.local.status == 2) { %>
+              <div class="col-xs-12">
+                <a href="/admin" class="btn btn-default btn-sm admin_btn">Administrationche</a>
+              </div>
+            <% } %>
           </div>
         </div>
       </div>

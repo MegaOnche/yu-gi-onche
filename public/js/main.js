@@ -1,13 +1,13 @@
 var pseudo;
 var userInfos;
-var socket = io.connect('http://test-onche.rhcloud.com:8000/', {
+var socket = io.connect('http://yugi-onche.rhcloud.com:8000/', {
   'forceNew': true
 });
 
 
 function assignInfos(infos){
-  var json_infos = JSON.parse(infos);
-  pseudo = json_infos["local"]["username"];
+  var json_infos = JSON.parse(infos).local;
+  pseudo = json_infos.username;
 }
 
 function htmlDecode(input){
