@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Yu-Gi-Onche!</title>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="sass/main.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Yu-Gi-Onche!</h1>
+        <div class="col-xs-8 col-xs-offset-2">
+
+          <h2>Administrationche - Changer le status</h2>
+          <hr>
+          <form action="/admin-change" method="post">
+            <div class="form-group">
+              <label style="display:block;">Pseudo de la personne:</label>
+                <input type="text" class="form-control" name="name" placeholder="Jean-Augustin">
+            </div>
+            <div class="form-group">
+              <label>Nouveau status:</label>
+              <div class="radio">
+                <label><input type="radio" name="status" style="width:auto;" value="0">Joueur</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="status" style="width:auto;" value="1">Modérateur</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="status" style="width:auto;" value="2">Administrateur</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default">Changer</button>
+          </form>
+
+          <a href="/admin" class="btn btn-default btn-sm">Retour au menu de l'Administrationche</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

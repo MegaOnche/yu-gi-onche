@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Card = require('./models/card.js');
+var User = require('./models/user.js');
 
 module.exports = function(app, passport) {
 
@@ -85,6 +86,12 @@ module.exports = function(app, passport) {
   app.post('/admin-rmcard', function(req,res){
     removeCardFromDB(req, res);
   });
+  app.get('/admin-change', isAdmin, function(req, res) {
+    res.render('admin-change.ejs');
+  });
+  app.post('/admin-change', function(req,res){
+    changeStatus(req, res);
+  });
 };
 
 function isLoggedIn(req, res, next) {
@@ -136,7 +143,18 @@ function addCardToDB(req, res) {
 }
 
 function removeCardFromDB(req, res){
-  Card.find({ group:req.body.group, id:req.body.id }).remove(function(err){
+  Card.findOne({ group:req.body.group, id:req.body.id }).remove(function(err){
     res.redirect('/admin-rmcard');
   });
+}
+
+function changeStatus(req, res){
+  User.findOne({ 'local.username': req.body.name}, function(err, userDoc) {
+    if (userDoc)
+    {
+      userDoc.local.status = req.body.status;
+      userDoc.save();
+    }
+    res.redirect('/admin-change');
+});
 }
